@@ -9,16 +9,10 @@ import analyzer.server_config as config
 
 # Create your views here.
 
-"""
 def index(request):
-    client = MongoClient('localhost', 27017, username='krp', password='krp1234567890!')
-    db_names = client.database_names()
-    return HttpResponse(db_names[0])
-"""
-def index(request):
-    client = MongoClient('localhost', 27017, username='krp', password='krp1234567890!')
+    client = MongoClient('localhost', 27017, username=config.mongoid, password=config.mongopw)
     db_names = client.database_names()
     context = {}
-    print config.mongoid
     return render(request, 'ananlyzer/index.html')
+    #return HttpResponse(db_names[0])
 
