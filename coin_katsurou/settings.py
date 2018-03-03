@@ -121,3 +121,4 @@ LANGUAGE_CODE = 'ko-kr'
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
